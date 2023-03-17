@@ -100,7 +100,8 @@ function startLRServer(options) {
         sendAll({
           command: 'reload',
           path: options.renameFunc(file),
-          liveCSS: true
+          liveCSS: true,
+          ...options.extraSendOptions,
         });
       }
     });
